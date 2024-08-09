@@ -13,29 +13,29 @@ https://asset.cloudinary.com/dk0k3povu/0871e322515f5057f30627593386a560
 
 2. **Clone the project**: Clone the project repository from a version control system like Git. Use the following command in your terminal:
     ```
-    git clone https://github.com/nathekame/plantify-app.git
+    git clone https://github.com/coachlivinglegend/the-plant-guard.git
     ```
 
     If you are not cloning the project from github and just unzipping it, then you can skip the above step.
 
 3. **Navigate to the project directory**: Use the `cd` command to navigate to the project directory:
     ```
-    cd plantify-app
+    cd the-plant-guard
     ```
 
 4. **Create a virtual environment**: It is recommended to create a virtual environment to isolate project dependencies. Run the following command to create a virtual environment:
     ```
-    python -m venv plantify-env
+    python -m venv plant-guard-env
     ```
 
 5. **Activate the virtual environment**: Activate the virtual environment using the appropriate command for your operating system:
     - For Windows:
       ```
-      .\env\Scripts\activate
+      .\plant-guard-env\Scripts\activate
       ```
     - For macOS/Linux:
       ```
-      source env/bin/activate
+      source plant-guard-env/bin/activate
       ```
 
 6. **Install project dependencies**: Install the required dependencies by running the following command:
@@ -49,16 +49,21 @@ https://asset.cloudinary.com/dk0k3povu/0871e322515f5057f30627593386a560
     plantify-env
     ```
 
-8. You can navigate to the eda folder where you find two sets of notebook files
-
-    ```
-    cd eda
-    ```
-    - EDA 
+8. You can run any of notebook files
+    - EDA
     ```
     plant_id_eda.ipynb
     ```
     and 
      ```
     plant_disease_id_eda.ipynb
+    ```
+
+    - Model Training
+    ```
+    plant-identification.ipynb
+    ```
+    and 
+     ```
+    plant-disease-identification.ipynb
     ```
