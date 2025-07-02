@@ -1,74 +1,174 @@
-Code Execution Steps
+# 🌱 The Plant Guard
 
-Dataset url - https://www.kaggle.com/datasets/sadmansakibmahi/plant-disease-expert/data
+An intelligent plant health monitoring system that leverages deep learning and computer vision to identify plant species and diagnose diseases. This project demonstrates expertise in machine learning, data science, and agricultural technology applications.
 
-Follow up from our last discussion - https://dev.azure.com.mcas.ms/Dbeckley6774/INFO8665%20-%20Projects%20in%20Machine%20Learning%20(Plantify)/_workitems/edit/105
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10.1-orange.svg)](https://tensorflow.org)
+[![Keras](https://img.shields.io/badge/Keras-2.10.0-red.svg)](https://keras.io)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3.0-green.svg)](https://scikit-learn.org)
 
-Not sure if you can access the azure link, here is a screenshot - 
-https://asset.cloudinary.com/dk0k3povu/0871e322515f5057f30627593386a560
+## 🚀 Project Overview
 
+The Plant Guard is a comprehensive machine learning solution that addresses two critical challenges in agriculture and gardening:
 
-# **Main Steps**
-1. **Install Python**: Ensure that Python is installed on your system. You can download the latest version of Python from the official Python website.
+1. **Plant Species Identification**: Accurately classify plant species from images
+2. **Disease Detection**: Identify and diagnose plant diseases for early intervention
 
-2. **Install Git**: Ensure you have git installed as well. You can download the latest version from the official website.
+This project showcases end-to-end machine learning pipeline development, from data exploration to model deployment, with practical applications in precision agriculture and plant health management.
 
-3. **Clone the project**: Clone the project repository from a version control system like Git. Use the following command in your terminal (git bash shell or any git enabled shell):
-    ```
-    git clone https://github.com/coachlivinglegend/the-plant-guard.git
-    ```
+## 🎯 Key Features
 
-    If you are not cloning the project from github and just unzipping it, then you can skip the above step.
+- **Multi-Model Architecture**: Implements both vanilla CNN and transfer learning approaches using VGG16
+- **Comprehensive EDA**: Detailed exploratory data analysis for both plant identification and disease detection
+- **Model Comparison**: Systematic evaluation of different neural network architectures
+- **Production-Ready Code**: Well-structured Jupyter notebooks with clear documentation
+- **Scalable Design**: Modular approach suitable for integration into larger agricultural systems
 
-4. **Navigate to the project directory**: Use the `cd` command to navigate to the project directory:
-    ```
-    cd the-plant-guard
-    ```
+## 🛠 Technical Stack
 
-As an alternative to the above steps you can also use the Github Desktop option or you can also download a zipped version of the repository.
+- **Deep Learning**: TensorFlow/Keras, PyTorch
+- **Computer Vision**: CNN architectures, Transfer Learning (VGG16)
+- **Data Science**: Pandas, NumPy, Scikit-learn
+- **Visualization**: Matplotlib, Seaborn, Plotly
+- **Additional Tools**: XGBoost, ImageHash, IPython widgets
 
-5. **Create a virtual environment**: It is recommended to create a virtual environment to isolate project dependencies. Run the following command to create a virtual environment:
-    ```
-    python -m venv plant-guard-env
-    ```
+## 📊 Dataset
 
-6. **Activate the virtual environment**: Activate the virtual environment using the appropriate command for your operating system:
-    - For Windows (in a powershell or cmd or zsh shell) :
-      ```
-      .\plant-guard-env\Scripts\activate
-      ```
-    - For macOS/Linux:
-      ```
-      source plant-guard-env/bin/activate
-      ```
+The project utilizes the comprehensive [Plant Disease Expert dataset](https://www.kaggle.com/datasets/sadmansakibmahi/plant-disease-expert/data) from Kaggle, which provides:
+- High-quality plant images across multiple species
+- Diverse disease categories with clinical annotations
+- Balanced representation for robust model training
 
-7. **Install project dependencies**: Install the required dependencies by running the following command:
-    ```
-    pip install -r requirements.txt
-    ```
+## 🏗 Project Structure
 
-8. **Run the project**: You can run any of the notebook files in the project to see it in action.
-    You will be prompted to select a kernel. In the python environments, you can select
-    ```
-    plant-guard-env
-    ```
-    If you don't find this environment, just close your code editor and reopen it.
+```
+the-plant-guard/
+├── 📊 EDA Notebooks
+│   ├── plant_id_eda.ipynb           # Plant identification analysis
+│   └── plant_disease_id_eda.ipynb   # Disease detection analysis
+├── 🤖 Model Training
+│   ├── plant-identification.ipynb    # Plant species classification
+│   └── plant-disease-identification.ipynb # Disease detection models
+├── 🎯 Trained Models
+│   ├── disease-vanilla.h5           # Vanilla CNN for disease detection
+│   ├── disease-vgg16.h5             # VGG16 transfer learning model
+│   ├── plant-disease-vanilla.h5     # Combined plant-disease model
+│   ├── vanilla.h5                   # Vanilla CNN for plant ID
+│   └── vgg16_vanilla.h5             # VGG16 for plant identification
+├── 📄 Documentation
+│   ├── docs/                        # HTML exports of notebooks
+│   └── documentation/               # Additional project docs
+├── 🔧 Development
+│   └── dev/                         # Development utilities
+└── 📋 Configuration
+    ├── requirements.txt              # Python dependencies
+    └── README.md                     # Project documentation
+```
 
-9. You can run any of notebook files
-    - EDA
-    ```
-    plant_id_eda.ipynb
-    ```
-    and 
-     ```
-    plant_disease_id_eda.ipynb
-    ```
+## 🚀 Getting Started
 
-    - Model Training
-    ```
-    plant-identification.ipynb
-    ```
-    and 
-     ```
-    plant-disease-identification.ipynb
-    ```
+### Prerequisites
+
+- Python 3.8 or higher
+- Git (optional, for cloning)
+- 8GB+ RAM recommended for model training
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/coachlivinglegend/the-plant-guard.git
+   cd the-plant-guard
+   ```
+
+2. **Set up virtual environment**
+   ```bash
+   # Create virtual environment
+   python -m venv plant-guard-env
+   
+   # Activate virtual environment
+   # Windows (PowerShell/CMD)
+   .\plant-guard-env\Scripts\activate
+   
+   # macOS/Linux
+   source plant-guard-env/bin/activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### 🔬 Running the Analysis
+
+#### Exploratory Data Analysis
+Start with the EDA notebooks to understand the dataset:
+
+```bash
+# Plant species analysis
+jupyter notebook plant_id_eda.ipynb
+
+# Disease detection analysis  
+jupyter notebook plant_disease_id_eda.ipynb
+```
+
+#### Model Training
+Train and evaluate the machine learning models:
+
+```bash
+# Plant identification models
+jupyter notebook plant-identification.ipynb
+
+# Disease detection models
+jupyter notebook plant-disease-identification.ipynb
+```
+
+> **Note**: Select the `plant-guard-env` kernel when prompted in Jupyter. If the environment doesn't appear, restart your IDE/Jupyter server.
+
+## 🎯 Model Performance
+
+The project implements multiple neural network architectures:
+
+- **Vanilla CNN**: Custom convolutional neural network designed for plant image classification
+- **VGG16 Transfer Learning**: Pre-trained VGG16 model fine-tuned for plant and disease recognition
+- **Ensemble Approaches**: Combination of multiple models for improved accuracy
+
+## 💼 Business Applications
+
+- **Precision Agriculture**: Early disease detection for crop management
+- **Smart Gardening**: Plant identification and health monitoring for home gardeners  
+- **Agricultural Research**: Data-driven insights for plant pathology studies
+- **Mobile Applications**: Integration potential for field-ready diagnostic tools
+
+## 🔮 Future Enhancements
+
+- [ ] Real-time inference API development
+- [ ] Mobile application integration
+- [ ] Edge device deployment optimization
+- [ ] Multi-language plant database expansion
+- [ ] Temporal disease progression tracking
+
+## 📈 Skills Demonstrated
+
+- **Machine Learning**: Deep learning model development and optimization
+- **Computer Vision**: Image preprocessing and augmentation techniques
+- **Data Science**: Statistical analysis and feature engineering
+- **Software Engineering**: Clean, maintainable code with proper documentation
+- **Research**: Systematic experimentation and model comparison
+- **Domain Knowledge**: Understanding of agricultural and botanical applications
+
+## 🤝 Contributing
+
+This project is open for collaboration and improvements. Feel free to:
+- Report issues or bugs
+- Suggest new features
+- Submit pull requests
+- Share feedback on model performance
+
+## 📄 License
+
+This project is available for educational and research purposes. Please cite appropriately if used in academic work.
+
+---
+
+**Developed with 🌱 for sustainable agriculture and plant health management**
